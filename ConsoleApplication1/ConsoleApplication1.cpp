@@ -16,7 +16,7 @@
 struct Process {
     int id;
     std::string type; // "F" for Foreground, "B" for Background
-    bool promoted; // 프로모션 여부
+    bool promoted; // 프로모션
     int waitCount; // WQ에서 기다린 횟수
 
     Process(int id, std::string type)
