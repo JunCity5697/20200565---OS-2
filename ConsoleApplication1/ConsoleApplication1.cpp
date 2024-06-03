@@ -1,4 +1,7 @@
-﻿#include <iostream>
+﻿//2-1 ~ 2-2의 sleep & awake까지 구현했습니다.
+//20200565 컴퓨터공학과 이강준
+
+#include <iostream>
 #include <thread>
 #include <mutex>
 #include <condition_variable>
@@ -175,7 +178,7 @@ private:
     }
 
     void split_n_merge(Node* node) {
-        int threshold = std::max(1, totalProcesses / nodeCount); // 동적 임계치 계산
+        int threshold = totalProcesses / nodeCount; // 동적 임계치 계산
 
         while (node != nullptr && node->next != nullptr) {
             if (node->processes.size() > threshold) {
